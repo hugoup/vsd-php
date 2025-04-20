@@ -7,5 +7,10 @@ usage:
 ```php
 
 vsd(<variable>)
+
 or 
+
 vsd(<variable1>,<variable2>,<variable3>)
+```
+
+thats all...
