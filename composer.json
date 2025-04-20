@@ -1,5 +1,8 @@
 {
-  "name": "hugo/php-vsd",
+  "name": "hugo/vsd-php",
+  "description": "Integrate php var-dumper in vs code",
+  "type": "library",
+  "license": "MIT",
   "require": {
     "symfony/var-dumper": "^7.2"
   },

@@ -50,6 +50,7 @@ class VsDumper
     private function generateBacktrace(): array
     {
         $backtrace = debug_backtrace();
+
         foreach (array_keys($backtrace) as $key) {
             foreach ($backtrace[$key]['args'] as $k => $a) {
                 $backtrace[$key]['args'][$k] = gettype($a);
