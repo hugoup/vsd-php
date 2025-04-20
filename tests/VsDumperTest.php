@@ -3,7 +3,7 @@
 namespace Tests;
 
 use PHPUnit\Framework\TestCase;
-use Hugo\Vsd\VsDumper;
+use HugoUp\Vsd\VsDumper;
 
 class VsDumperTest extends TestCase
 {

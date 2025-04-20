@@ -1,6 +1,6 @@
 <?php
 
-namespace Hugo\Vsd;
+namespace HugoUp\Vsd;
 
 use Symfony\Component\VarDumper\Cloner\VarCloner;
 use Symfony\Component\VarDumper\Dumper\HtmlDumper;

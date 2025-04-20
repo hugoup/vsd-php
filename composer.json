@@ -1,5 +1,5 @@
 {
-  "name": "hugo/vsd-php",
+  "name": "hugoup/vsd-php",
   "description": "Integrate php var-dumper in vs code",
   "type": "library",
   "license": "MIT",
@@ -8,7 +8,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Hugo\\Vsd\\": "src/"
+      "HugoUp\\Vsd\\": "src/"
     },
     "files": [
       "src/functions.php"

@@ -1,10 +1,10 @@
 <?php
 
-use Hugo\Vsd\VsDumper;
+use HugoUp\Vsd\VsDumper;
 
 if (!function_exists('vsd')) {
-    function vsd(...$vars): void
-    {
-        VsDumper::dump(...$vars);
-    }
+	function vsd(...$vars): void
+	{
+		VsDumper::dump(...$vars);
+	}
 }
