@@ -77,7 +77,7 @@ class VsDumper
             'id' => $id,
             'timestamp' => $timeMarker,
             'backtrace' => $backtrace,
-            'headers' => $http_response_header ?? null, // @phpstan-ignore-line
+            'headers' => $http_response_header ?? [],
             'request' => $_REQUEST,
             'output' => $dump,
         ];
