@@ -56,17 +56,18 @@ class VsDumper
                 $backtrace[$key]['args'][$k] = gettype($a);
             }
         }
-        
+
         // unset initial trace always inside dumper
         unset($backtrace[0]);
-        
-        return $backtrace;
+        unset($backtrace[1]);
+
+        return array_values($backtrace);
     }
 
     private function prepareFinalOutput(string $dump, array $backtrace): array
     {
         $timeMarker = date('Y-m-d H:i:s');
-        $current = array_shift($backtrace);
+        $current = $backtrace[0] ?? [];
 
         preg_match('/class=sf-dump id=(.*)\sdata/miU', $dump, $matches);
         $id = $matches[1] ?? null;
