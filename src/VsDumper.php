@@ -58,7 +58,7 @@ class VsDumper
         }
         
         // unset initial trace always inside dumper
-        unset(backtrace[0]);
+        unset($backtrace[0]);
         
         return $backtrace;
     }
