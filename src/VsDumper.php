@@ -56,6 +56,10 @@ class VsDumper
                 $backtrace[$key]['args'][$k] = gettype($a);
             }
         }
+        
+        // unset initial trace always inside dumper
+        unset(backtrace[0]);
+        
         return $backtrace;
     }
 
