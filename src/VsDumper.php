@@ -24,14 +24,21 @@ class VsDumper
     {
         $instance = self::getInstance();
 
+        if (sizeof($vars) === 1) {
+            $vars = $vars[0];
+        }
+
         $output = $instance->generateDumpOutput($vars);
+
+
+
         $formattedOutput = $instance->formatDumpOutput($output);
         $backtrace = $instance->generateBacktrace();
         $finalOutput = $instance->prepareFinalOutput($formattedOutput, $backtrace);
         $instance->sendToSocket($finalOutput);
     }
 
-    private function generateDumpOutput(array $vars): string
+    private function generateDumpOutput(mixed $vars): string
     {
         $cloner = new VarCloner();
         $dumper = new HtmlDumper();
